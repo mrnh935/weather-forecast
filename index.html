@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <title>What's the weather today?</title>
+  </head>
+  <body>
+    <div class="weather-app">
+      <header>
+        <form class="search-form" id="search-form">
+          <input
+            type="search"
+            placeholder="Enter a city"
+            required
+            class="search-form-input"
+            id="search-input"
+          />
+          <input type="submit" value="Search" class="search-form-button" />
+        </form>
+      </header>
+      <main>
+        <div class="weather-app-data">
+          <div>
+            <h1 class="current-city" id="city-name"></h1>
+            <p class="current-details">
+              <span id="city-date"></span><br />
+              <span class="conditions" id="city-conditions"></span>
+              <br />
+              <br />
+              <span id="current-details">
+                Pressure: <strong></strong> Humidity: <strong></strong> Wind:
+                <strong></strong>
+              </span>
+            </p>
+            <div class="weather-forecast">
+              <div class="row">
+                <div class="col-2">
+                  <div class="forecast-date">Thu<br /></div>
+                  <div class="forecast-icon">
+                    <img
+                      src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-day.png"
+                      alt=""
+                      width="40"
+                    />
+                    <br />
+                  </div>
+                  <div class="forecast-temp">
+                    <span class="forecast-temp-max">18 °C</span>
+                    <span class="forecast-temp-min">12 °C</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="current-temperature-container">
+            <div id="icon"></div>
+            <div class="current-temperature"><span id="city-temp"></span></div>
+            <div class="current-temperature-unit">°C</div>
+          </div>
+        </div>
+      </main>
+
+      <footer>
+        Coded by
+        <a href="https://github.com/mrnh935" target="_blank"> Marinah Rahmat</a
+        >, open-sourced on
+        <a href="https://github.com/mrnh935/whats-the-weather" target="_blank"
+          >GitHub</a
+        >
+        and hosted on
+        <a href="https://heywhatstheweathertoday.netlify.app/" target="_blank"
+          >Netlify</a
+        >.
+      </footer>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
