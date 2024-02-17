@@ -6,9 +6,7 @@ function displayWeather(response) {
   let detailInput = document.querySelector("#current-details");
   let timeInput = document.querySelector("#city-date");
   date = new Date(response.data.time * 1000);
-
   let iconElement = document.querySelector("#icon");
-
   let pressure = Math.round(response.data.temperature.pressure);
   let humidity = Math.round(response.data.temperature.humidity);
   let wind = Math.round(response.data.wind.speed);
@@ -19,6 +17,8 @@ function displayWeather(response) {
   conditionsInput.innerHTML = response.data.condition.description;
   detailInput.innerHTML = `Pressure: <strong>${pressure}</strong> Humidity: <strong>${humidity}%</strong> Wind: <strong>${wind} mps</strong>`;
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon"/>`;
+
+  getForecast(response.data.city);
 }
 
 function searchCity(city) {
@@ -81,6 +81,12 @@ function formatDate(date) {
   return `${day} ${currentDate} ${month} ${hours}:${minutes}`;
 }
 
+function getForecast(city) {
+  let apiKey = "3af237t6810483eo486b71736a808a31";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+  axios(apiUrl).then(displayForecast);
+}
+
 function displayForecast() {
   let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
   let forecastHtml = "";
@@ -110,4 +116,3 @@ let searchFormInput = document.querySelector("#search-form");
 searchFormInput.addEventListener("submit", handleSearchSubmit);
 
 searchCity("The Hague");
-displayForecast();
