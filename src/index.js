@@ -81,7 +81,33 @@ function formatDate(date) {
   return `${day} ${currentDate} ${month} ${hours}:${minutes}`;
 }
 
+function displayForecast() {
+  let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
+  let forecastHtml = "";
+
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `
+      <div class="weather-forecast">
+        <div class="forecast-date">${day}</div><br />
+        <div class="forecast-icon">🌤️</div><br />
+        <div class="forecast-temp"><br />
+          <div class="forecast-temp-max">
+            <strong>15º</strong>
+          </div>
+          <div class="forecast-temp-min">9º</div>
+        </div>
+      </div>
+    `;
+  });
+
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = forecastHtml;
+}
+
 let searchFormInput = document.querySelector("#search-form");
 searchFormInput.addEventListener("submit", handleSearchSubmit);
 
-searchCity("Amsterdam");
+searchCity("The Hague");
+displayForecast();

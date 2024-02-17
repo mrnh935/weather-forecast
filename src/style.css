@@ -64,8 +64,8 @@ header {
 
 .weather-app-data {
   display: flex;
-  justify-content: space-between 10px;
-  padding: 15px 15px;
+  justify-content: space-between;
+  padding: 15px 15px 10px 15px;
 }
 
 .current-city {
@@ -78,6 +78,7 @@ header {
 .conditions {
   display: inline-block;
   text-transform: lowercase;
+  color: rgb(72, 88, 105);
 }
 
 .current-details {
@@ -121,8 +122,10 @@ header {
 
 .weather-forecast {
   display: flex;
-  justify-content: space-around;
-  margin-top: 9px;
+  justify-content: center;
+  margin-top: 0;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
 }
 
 .forecast-date {
@@ -130,21 +133,31 @@ header {
   opacity: 0.5;
   text-align: center;
   color: rgb(59, 89, 121);
+  flex: 1 1 100%;
 }
 
 .forecast-icon {
-  font-size: 38px;
+  font-size: 30px;
   text-align: center;
-  margin: 0 0;
+  flex: 1 1 100%;
 }
 
 .forecast-temp {
   font-size: 12px;
   text-align: center;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  flex: 1 1 100%;
+}
+
+.forecast-temp-max {
+  padding: 0 5px;
 }
 
 .forecast-temp-min {
   opacity: 0.5;
+  padding: 0 5px;
 }
 
 footer {
