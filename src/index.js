@@ -17,8 +17,8 @@ function displayWeather(response) {
   cityElement.innerHTML = response.data.city;
   timeInput.innerHTML = formatDate(date);
   conditionsInput.innerHTML = response.data.condition.description;
-  feelsLikeInput.innerHTML = `Feels like <strong>${realTemperature}ºC`;
-  detailInput.innerHTML = `Pressure: <strong>${pressure} hPa</strong> Humidity: <strong>${humidity}%</strong> Wind: <strong>${wind} mps</strong>`;
+  feelsLikeInput.innerHTML = `Feels like <strong>${realTemperature}ºC</strong>`;
+  detailInput.innerHTML = `Pressure: <strong>${pressure} hPa</strong> Humidity: <strong>${humidity}%</strong> Wind: <strong>${wind} m/s</strong>`;
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon" />`;
 
   getForecast(response.data.city);
