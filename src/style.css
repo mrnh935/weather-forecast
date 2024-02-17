@@ -65,7 +65,7 @@ header {
 .weather-app-data {
   display: flex;
   justify-content: space-between;
-  padding: 15px 15px 10px 15px;
+  padding: 15px 15px 15px 15px;
 }
 
 .current-city {
@@ -88,24 +88,38 @@ header {
   display: inline-block;
 }
 
+.conditions::first-letter {
+  text-transform: uppercase;
+}
+
+.feels-like-temp {
+  font-size: 14px;
+}
+
+.feels-like-temp strong {
+  color: rgb(99, 140, 183);
+}
+
 .current-details strong {
   color: rgb(99, 140, 183);
 }
 
-.conditions::first-letter {
-  text-transform: uppercase;
+.current-details-city {
+  font-size: 14px;
 }
 
 .current-temperature-container {
   display: flex;
   max-height: 50%;
   max-width: 70%;
+  padding-top: 20px;
+  justify-content: space-evenly;
 }
 
 .weather-app-icon {
   width: 88px;
   height: 88px;
-  padding: 15px 0 0 5px;
+  padding: 20px 0 0 5px;
 }
 
 .current-temperature {
@@ -118,37 +132,39 @@ header {
 .current-temperature-unit {
   margin-top: 20px;
   font-size: 28px;
+  padding: 2px;
 }
 
 .weather-forecast {
   display: flex;
-  justify-content: center;
   margin-top: 0;
   margin-bottom: 10px;
+  justify-content: space-around;
   flex-wrap: wrap;
 }
 
 .forecast-date {
-  font-size: 15px;
-  opacity: 0.5;
+  font-size: 14px;
   text-align: center;
   color: rgb(59, 89, 121);
+  margin: 0 auto;
+  line-height: 20px;
   flex: 1 1 100%;
 }
 
 .forecast-icon {
-  font-size: 30px;
-  text-align: center;
+  width: 10px;
   flex: 1 1 100%;
 }
 
 .forecast-temp {
-  font-size: 12px;
+  font-size: 14px;
   text-align: center;
   margin-top: 10px;
   display: flex;
   justify-content: center;
   flex: 1 1 100%;
+  line-height: 20px;
 }
 
 .forecast-temp-max {
