@@ -48,7 +48,7 @@ header {
   font-size: 16px;
   padding: 15px 20px;
   font-family: "Poppins", sans-serif;
-  opacity: 0.8;
+  opacity: 0.85;
 }
 
 .search-form-input:hover {
@@ -62,7 +62,7 @@ header {
 
 .search-form-button {
   background: white;
-  opacity: 0.8;
+  opacity: 0.85;
   padding: 15px 30px;
   border: none;
   font-size: 16px;
@@ -84,7 +84,7 @@ header {
   padding: 20px 20px 5px 20px;
   border-radius: 5px;
   background: white;
-  opacity: 0.8;
+  opacity: 0.85;
   margin: 0 0 15px;
 }
 
@@ -161,10 +161,10 @@ header {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  padding: 5px 0px 5px 0px;
+  padding: 10px 0px 10px 0px;
   border-radius: 5px;
   background: white;
-  opacity: 0.8;
+  opacity: 0.85;
 }
 
 .forecast-date {
@@ -174,11 +174,13 @@ header {
   margin: 0 auto;
   line-height: 20px;
   flex: 1 1 100%;
+  align-items: flex-end;
 }
 
 .forecast-icon {
   width: 1px;
   flex: 1 1 100%;
+  align-items: flex-end;
 }
 
 .forecast-temp {
