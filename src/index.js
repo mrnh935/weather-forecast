@@ -9,7 +9,6 @@ function displayWeather(response) {
   let iconElement = document.querySelector("#icon");
   let feelsLikeInput = document.querySelector("#feels-like");
   let realTemperature = Math.round(response.data.temperature.feels_like);
-  let pressure = Math.round(response.data.temperature.pressure);
   let humidity = Math.round(response.data.temperature.humidity);
   let wind = Math.round(response.data.wind.speed);
 
@@ -18,7 +17,7 @@ function displayWeather(response) {
   timeInput.innerHTML = formatDate(date);
   conditionsInput.innerHTML = response.data.condition.description;
   feelsLikeInput.innerHTML = `Feels like <strong>${realTemperature}ºC</strong>`;
-  detailInput.innerHTML = `Pressure: <strong>${pressure} hPa</strong> Humidity: <strong>${humidity}%</strong> Wind: <strong>${wind} m/s</strong>`;
+  detailInput.innerHTML = `Humidity: <strong>${humidity}%</strong> Wind: <strong>${wind} m/s</strong>`;
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon" />`;
 
   getForecast(response.data.city);

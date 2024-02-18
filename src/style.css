@@ -53,6 +53,11 @@ header {
 
 .search-form-input:hover {
   background-color: darkgrey;
+  font-family: "Poppins", sans-serif;
+}
+
+.search-form-input[type="search"]:focus {
+  outline: none;
 }
 
 .search-form-button {
@@ -70,16 +75,14 @@ header {
 .search-form-button:hover {
   background: black;
   color: white;
+  font-family: "Poppins", sans-serif;
 }
 
 .weather-app-data {
   display: flex;
   justify-content: space-between;
   padding: 20px 20px 5px 20px;
-  border: 10px;
-  border-color: black;
   border-radius: 5px;
-  border-width: 5px;
   background: white;
   opacity: 0.8;
   margin: 0 0 15px;
@@ -131,7 +134,7 @@ header {
   display: flex;
   max-height: 50%;
   max-width: 70%;
-  padding-top: 20px;
+  padding: 20px 20px;
   justify-content: space-evenly;
 }
 
@@ -158,11 +161,8 @@ header {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  padding: 5px;
-  border: 10px;
-  border-color: black;
+  padding: 5px 0px 5px 0px;
   border-radius: 5px;
-  border-width: 5px;
   background: white;
   opacity: 0.8;
 }
